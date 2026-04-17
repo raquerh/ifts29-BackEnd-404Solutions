@@ -3,8 +3,8 @@
     "id": 1,
     "nombre": "Detergente Enzimático 5L",
     "categoria": "Limpieza Industrial",
-    "stockActual": "10",
-    "stockMinimo": "15",
+    "stockActual": 10,
+    "stockMinimo": 15,
     "precio": "2500"
   },
   {

@@ -3,12 +3,16 @@ const app = express();
 const path = require('path');
 const rutasProductos = require('./routes/productoRoutes');
 
-// Configuración de Pug y estaticos(Clase 4)
+// Configuración de Pug 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public')));
 
-// Middlewares (Clase 2 y 4)
+// Middlewares 
+ // personalizado para loguear cada petición
+app.use((req, res, next) => {
+    console.log(`[${new Date().toLocaleTimeString()}] ${req.method} ${req.url}`);
+    next();
+});
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true })); // Para leer formularios
 app.use(express.json()); // Para Thunder Client
