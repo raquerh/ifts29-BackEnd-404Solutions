@@ -20,7 +20,9 @@ app.use(express.json()); // Para Thunder Client
 // Uso de las rutas
 app.use('/', rutasProductos);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
+    const PORT = process.env.PORT || 3000;
+
 });

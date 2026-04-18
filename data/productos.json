@@ -1,13 +1,5 @@
 [
   {
-    "id": 1,
-    "nombre": "Detergente Enzimático 5L",
-    "categoria": "Limpieza Industrial",
-    "stockActual": 10,
-    "stockMinimo": 15,
-    "precio": "2500"
-  },
-  {
     "id": 2,
     "nombre": "Desinfectante Amonio Cuaternario",
     "categoria": "Desinfección",
@@ -30,5 +22,21 @@
     "stockActual": 5,
     "stockMinimo": 10,
     "precio": 2200
+  },
+  {
+    "id": 5,
+    "nombre": "detergente thunder",
+    "categoria": "limpieza industrial",
+    "precio": 1500,
+    "stockActual": 20,
+    "stockMinimo": 5
+  },
+  {
+    "id": 6,
+    "nombre": "Lavandina en gel",
+    "categoria": "Limpieza Industrial",
+    "precio": 2000,
+    "stockActual": 500,
+    "stockMinimo": 1000
   }
 ]
