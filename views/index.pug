@@ -3,6 +3,9 @@ extends layout
 block contenido
     h1 Inventario Actual de Productos
 
+    div(style='text-align: right; margin-bottom: 15px;')
+        a.btn-nuevo(href='/productos/nuevo') + Registrar Producto
+
     if productos.length > 0
         table
             thead
