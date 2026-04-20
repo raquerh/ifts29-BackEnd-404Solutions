@@ -53,7 +53,7 @@ class Producto {
         lista.push(productoLimpio);
         this.guardar(lista);
     }
-
+    
     // Buscar un producto por ID
     buscarPorId(id) {
         const lista = this.leer();
@@ -61,19 +61,12 @@ class Producto {
     }
 
     // UPDATE: Actualizar datos
-    actualizar(id, datos) {
+    actualizar(id, datosActualizados) {
         let lista = this.leer();
         const indice = lista.findIndex(p => p.id == id);
         if (indice !== -1) {
-            lista[indice] = {
-                ...lista[indice],
-                nombre: datos.nombre,
-                categoria: datos.categoria || lista[indice].categoria,
-                precio: parseFloat(datos.precio),
-                stockActual: parseInt(datos.stockActual),
-                stockMinimo: parseInt(datos.stockMinimo),
-                id: parseInt(id)
-            };
+            // Mantenemos el ID original pero actualizamos el resto
+            lista[indice] = { ...lista[indice], ...datosActualizados, id: parseInt(id) };
             this.guardar(lista);
         }
     }

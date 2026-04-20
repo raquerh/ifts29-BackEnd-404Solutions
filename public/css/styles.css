@@ -40,7 +40,6 @@ nav ul li a:hover {
     color: #18bc9c;
 }
 
-/* Contenedor Principal */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -118,15 +117,11 @@ td div {
 
 /* --- SOLUCIÓN PARA EL PRECIO --- */
 table th:nth-child(4),
-/* Suponiendo que el precio es la 4ta columna */
 table td:nth-child(4) {
     white-space: nowrap;
-    /* Evita que el texto salte de línea */
     min-width: 100px;
-    /* Asegura un ancho mínimo para que no se aprete */
 }
 
-/* Formularios */
 form {
     display: flex;
     flex-direction: column;
@@ -167,7 +162,6 @@ button:hover {
     background-color: #128f76;
 }
 
-/* Estilo para alertas de error en el formulario */
 .error-msg {
     color: #721c24;
     background-color: #f8d7da;
@@ -205,13 +199,23 @@ td div {
     align-items: center;
 }
 
-/* Estilo para el botón de Cancelar */
+.btn-nuevo {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #18bc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 .btn-cancelar {
     display: inline-block;
     padding: 10px 20px;
-    color: #666;             /* Gris para que no compita con el verde */
-    text-decoration: none;   /* Quitamos el subrayado azul */
-    border: 1px solid #ccc;  /* Un borde suave */
+    color: #666;             
+    text-decoration: none;
+    border: 1px solid #ccc;  
     border-radius: 4px;
     font-size: 1rem;
     font-weight: bold;
@@ -226,9 +230,9 @@ td div {
     border-color: #bbb;
 }
 
-/* Ajuste para que el botón de Guardar no ocupe todo el ancho si están juntos */
+
 .btn-guardar {
-    flex: 1; /* Esto hace que el botón verde sea el principal y ocupe el resto del espacio */
+    flex: 1; 
     background-color: #18bc9c;
     color: white;
     padding: 10px;
@@ -238,6 +242,11 @@ td div {
     font-size: 1rem;
     font-weight: bold;
 }
+
+.btn-guardar:hover {
+    background-color: #128f76;
+}
+
 /* Footer */
 footer {
     text-align: center;

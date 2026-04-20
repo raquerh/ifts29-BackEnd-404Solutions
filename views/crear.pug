@@ -34,4 +34,6 @@ block contenido
             label(for="stockMinimo") Stock Mínimo (Alerta):
             input(type="number" name="stockMinimo", required=true, value=datos ? datos.stockMinimo : '')
 
-        button(type="submit") Guardar Producto
+        div.form-actions
+            button(type="submit").btn-guardar Guardar Producto
+            a(href="/").btn-cancelar Cancelar
